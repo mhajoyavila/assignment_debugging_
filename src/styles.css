@@ -1,0 +1,141 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: #7b6d99; /* Pastel Purple */
+}
+
+body {
+  background: #e5f4f5; /* Blue-Green */
+  color: #ffffff; /* White */
+  max-width: 400px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.btn {
+  background: #7b6d99; /* Pastel Purple */
+  border: 1px solid #197278; /* Slightly darker blue-green */
+  color: #ffffff; /* Dark Gray */
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: #1f8a7f; /* Slightly darker blue-green on hover */
+}
+
+.btn.btn-danger {
+  background: #7b6d99; /* Pastel Purple */
+  border: 1px solid #7b6d99; /* Pastel Purple */
+  color: #7b6d99; /* Pastel Purple */
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+  background: #f07474; /* Lighter pastel purple on hover */
+}
+
+.new-item-form input {
+  outline: none;
+  border: 1px solid #b33852; /* Slightly darker pastel red */
+  background: #c9bedb; /* Light pastel purple */
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  color: #ffffff; /* White */
+}
+
+.new-item-form input:focus {
+  border: 1px solid #ff6b81; /* Pastel red on focus */
+}
+
+.header {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+  list-style: none;
+}
+
+.list li:has(input:checked) label {
+  color: #7b6d99; /* Pastel Purple */
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.list li label {
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 1px solid #7b6d99; /* Pastel Purple on focus */
+}
+
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.list li label::before {
+  content: '';
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #7b6d99; /* Pastel Purple */
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li label:hover::before {
+  background: #9aa8c6; /* Lighter pastel purple on hover */
+}
+
+.list li:has(input:checked) label::before {
+  content: '✔';
+  background: #4d3e67; /* Darker pastel purple */
+  color: #ffffff; /* White */
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: #362b4d; /* Even darker pastel purple on hover */
+}
